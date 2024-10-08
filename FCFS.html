@@ -1,0 +1,298 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- <link rel="icon" href="Icons.png" class="img-fluid" type="image/x-icon"> -->
+    <title>FCFS</title>
+
+    <link rel="stylesheet" href="FCFS.css">
+
+    <!-- BOOTSTRAP CSS -->
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous">
+
+
+    <!-- BOOTSTRAP JAVA Bundle(Bootstrap+ Popper) -->
+
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-w76AqPfDkMBDXo30jS1Sgez6pr3x5MlQ1ZAGC+nuZB+EYdgRZgiwxhTBTkF7CXvN"
+        crossorigin="anonymous"></script>
+
+
+
+</head>
+
+<body>
+
+
+
+    <!--  Container  -->
+    <div class="container-fluid">
+
+        <!-- ROW-1 -->
+        <div class="row">
+
+            <!-- COL-1 ROW-1 -->
+
+            <!-- INPUT TABLE -->
+
+            <!-- Start Table -->
+
+
+
+            <table class="table  m-auto w-75" id="">
+
+                <!-- Table Head -->
+                <thead class="text-center" id="Thead">
+                    <tr class="bg-dark text-light">
+                        <!-- Id -->
+                        <th scope="col">Proces ID</th>
+                        <!-- Burst Time -->
+                        <th scope="col">Burst Time</th>
+
+                    </tr>
+                </thead>
+                <!-- End Table Head -->
+
+
+                <!-- Table Body -->
+                <tbody id="Tbody">
+
+                    <!-- P1 -->
+                    <tr class="text-center">
+                        <div class="d-flex">
+                            <td class="Process" id="P1">P1</td>
+                            <td><input class="Burst-time-P input-padding" type="number" id="Burst-time-P1"
+                                    placeholder="Enter Burst Time"></td>
+                        </div>
+                    </tr>
+
+                    <!-- P2 -->
+                    <tr class="text-center">
+                        <div class="d-flex ">
+                            <td class="Process" id="P2">P2</td>
+                            <td><input class="Burst-time-P input-padding" type="number" id="Burst-time-P2"
+                                    placeholder="Enter Burst Time"></td>
+                        </div>
+                    </tr>
+
+                    <!-- P3 -->
+
+                    <tr class="text-center">
+                        <div class="d-flex">
+                            <td class="Process" id="P3">P3</td>
+
+                            <td><input class="Burst-time-P input-padding" type="number" id="Burst-time-P3"
+                                    placeholder="Enter Burst Time"></td>
+                        </div>
+                    </tr>
+
+                    <!-- P4 -->
+
+                    <tr class="text-center">
+                        <div class="d-flex">
+                            <td class="Process" id="P4">P4</td>
+                            <td> <input class="Burst-time-P input-padding" type="number" id="Burst-time-P4"
+                                    placeholder="Enter Burst Time"></td>
+                        </div>
+                    </tr>
+
+                    <!-- END PROCESSES LIST -->
+
+                </tbody>
+                <!-- End Table Body -->
+            </table>
+
+            <!-- End Table -->
+        </div>
+        <!-- End Col-1 Row-1-->
+    </div>
+    <!-- End Row-1 -->
+
+
+
+
+
+
+
+
+
+    <!-- Row-2 -->
+
+    <!-- BUTTON -->
+
+
+    <div class="row" style="margin: auto;">
+
+        <div class="col-6 mt-5 m-auto text-center">
+            <!-- Button Run -->
+            <button class="btn" id="Output">Run</button>
+
+
+
+        </div>
+
+    </div>
+
+    <!-- End Row-2 -->
+
+
+
+
+
+
+
+
+
+
+    <!-- ROW-3 -->
+
+    <!-- GANNT CHART -->
+    <div class="row  mt-5 ps-4" id="Chantt-Table" style="margin: auto;">
+
+        <!-- ROW-3 COL-1 -->
+        <div class="col">
+
+            <!-- Heading -->
+            <h3>Gantt Chart</h3>
+
+
+            <!-- Container -> Gantt Box -->
+            <div id="gantt-chart">
+
+                <!-- Completion Time -->
+                <div id="completion_time" class="d-flex" style="justify-content:space-between"></div>
+
+                <!-- Porcess Ids -->
+                <div id="Process_id_box_gant" class="d-flex"></div>
+            </div>
+            <!-- End Gantt box -->
+
+        </div>
+        <!-- End Row-3 Col-1 -->
+    </div>
+    <!-- End Row-3 -->
+
+
+
+
+
+
+
+
+
+
+    <!-- Row-4 -->
+
+
+
+
+    <div class="row" style="margin: auto;">
+
+        <!-- Row-4 col-1 -->
+
+        <div class="col">
+
+            <!-- OUTPUT TABLE -->
+
+            <!-- Start Table -->
+            <table class="table mt-5" id="TABLE_2">
+
+                <!-- Table Head -->
+                <thead class="text-center" id="Thead">
+                    <tr class="bg-dark text-light">
+                        <!-- Id -->
+                        <th scope="col">Proces ID</th>
+
+                        <!-- Arrival Time -->
+                        <th scope="col">Arrival Time</th>
+
+                        <!-- Burst Time -->
+                        <th scope="col">Burst Time</th>
+
+                        <!-- Completion Time -->
+                        <th scope="col">Completion Time</th>
+
+
+                        <!-- Turn around Time -->
+                        <th scope="col">Turn-around Time</th>
+
+
+
+                    </tr>
+                </thead>
+                <!-- End Table Head -->
+
+
+                <!-- Table Body -->
+                <tbody id="Tbody">
+
+                    <!-- P1 -->
+                    <tr class="text-center Table_2_row">
+
+                        <td>P1</td>
+                        <td class="P_arrival_time_table"></td>
+
+                        <td id="P1_Busrt_time_table"></td>
+                        <td id="P1_Completion_time_table"></td>
+                        <td id="p1_turnaround_time_table"></td>
+
+
+                    </tr>
+
+                    <!-- P2 -->
+                    <tr class="text-center Table_2_row">
+                        <td>P2</td>
+                        <td class="P_arrival_time_table"></td>
+                        <td id="P2_Busrt_time_table"></td>
+                        <td id="P2_Completion_time_table"></td>
+                        <td id="p2_turnaround_time_table"></td>
+                    </tr>
+
+                    <!-- P3 -->
+
+                    <tr class="text-center Table_2_row">
+                        <td>P3</td>
+                        <td class="P_arrival_time_table"></td>
+                        <td id="P3_Busrt_time_table"></td>
+                        <td id="P3_Completion_time_table"></td>
+                        <td id="p3_turnaround_time_table"></td>
+                    </tr>
+
+                    <!-- P4 -->
+
+                    <tr class="text-center Table_2_row">
+                        <td>P4</td>
+                        <td class="P_arrival_time_table"></td>
+                        <td id="P4_Busrt_time_table"></td>
+                        <td id="P4_Completion_time_table"></td>
+                        <td id="p4_turnaround_time_table"></td>
+                    </tr>
+
+                    <!-- END PROCESSES LIST -->
+
+                </tbody>
+                <!-- End Table Body -->
+            </table>
+
+            <!-- End Table -->
+        </div>
+        <!-- End col-1 Row-4 -->
+    </div>
+    <!-- Row-4 -->
+    </div>
+    <!-- End Container  -->
+
+
+
+    <script src="FCFS.js"></script>
+
+</body>
+
+</html>
